@@ -1,0 +1,463 @@
+{
+  "seed": 802,
+  "missingness_rates": [
+    0.0,
+    0.15,
+    0.3,
+    0.5
+  ],
+  "corruption_replicates": 5,
+  "primary_cost": 0.1,
+  "primary_capacity": 0.2,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "sklearn": "1.8.0",
+  "cpu": "x86_64",
+  "protocol": "Fixed before first benchmark execution; not externally preregistered.",
+  "datasets": {
+    "bank": {
+      "raw_n": 41188,
+      "n": 41176,
+      "duplicates_removed": 12,
+      "positives": 4639,
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "day_of_week",
+        "campaign",
+        "pdays",
+        "previous",
+        "poutcome",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed"
+      ],
+      "excluded": [
+        "duration"
+      ],
+      "categorical": [
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "day_of_week",
+        "poutcome"
+      ],
+      "source_url": "https://archive.ics.uci.edu/static/public/222/bank+marketing.zip",
+      "source_sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
+      "test_n": 20588,
+      "test_positive": 3676,
+      "folds": [
+        {
+          "fold": 0,
+          "train_n": 16470,
+          "calibration_n": 4118,
+          "test_n": 4117,
+          "train_positive": 0.04286581663630844,
+          "calibration_positive": 0.06240893637688198,
+          "test_positive": 0.05465144522710712,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.38692044800018266,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.7064329090164874
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 1.0177345880001667,
+              "platt_slope": 0.1559434479836847,
+              "platt_intercept": -2.2822837387996873
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 3.3350695429999178,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.7067942118650272
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 4.622697322000022,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.7066219618101885
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "train_n": 20588,
+          "calibration_n": 4117,
+          "test_n": 4118,
+          "train_positive": 0.04677482028366038,
+          "calibration_positive": 0.05465144522710712,
+          "test_positive": 0.10174842156386596,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.0514058879998629,
+              "platt_slope": 0.9509166841615896,
+              "platt_intercept": 0.01629366629060985
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.2772770749998017,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.848144066741144
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 2.2417856799997935,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.847921109424837
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 2.077882636999675,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.847955227997284
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "train_n": 24705,
+          "calibration_n": 4118,
+          "test_n": 4117,
+          "train_positive": 0.048087431693989074,
+          "calibration_positive": 0.10174842156386596,
+          "test_positive": 0.11974738887539471,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.09112478900033238,
+              "platt_slope": 0.5672977443733235,
+              "platt_intercept": -0.4736405144676821
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.414448228999845,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.172535001525353
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 3.2575441809999575,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.17568347187774
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 2.672082952999972,
+              "platt_slope": 0.001,
+              "platt_intercept": -2.174926410169375
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "train_n": 28823,
+          "calibration_n": 4117,
+          "test_n": 4118,
+          "train_positive": 0.05575408527911737,
+          "calibration_positive": 0.11974738887539471,
+          "test_positive": 0.15711510441962118,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.07903648899991822,
+              "platt_slope": 0.9799058359169281,
+              "platt_intercept": 0.7394684392348692
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.45630238099965936,
+              "platt_slope": 1.432095691560205,
+              "platt_intercept": 0.9012338130699381
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 3.26591904299994,
+              "platt_slope": 0.3639148688136239,
+              "platt_intercept": -1.4780571873877006
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 15.592527883999992,
+              "platt_slope": 0.5307924004193609,
+              "platt_intercept": -1.0242373178075905
+            }
+          ]
+        },
+        {
+          "fold": 4,
+          "train_n": 32940,
+          "calibration_n": 4118,
+          "test_n": 4118,
+          "train_positive": 0.06375227686703097,
+          "calibration_positive": 0.15711510441962118,
+          "test_positive": 0.45944633317144246,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.12851220900029148,
+              "platt_slope": 0.8297941478080362,
+              "platt_intercept": 0.49803618599004595
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.6616945089999717,
+              "platt_slope": 0.9134365676849526,
+              "platt_intercept": 0.20793077531646456
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 12.297872284999812,
+              "platt_slope": 1.2462710281459817,
+              "platt_intercept": 1.1895130510022471
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 3.1994876009998734,
+              "platt_slope": 0.6397349040781009,
+              "platt_intercept": 0.13475352541877822
+            }
+          ]
+        }
+      ]
+    },
+    "shop": {
+      "raw_n": 12330,
+      "n": 12205,
+      "duplicates_removed": 125,
+      "positives": 1908,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "excluded": [
+        "PageValues"
+      ],
+      "categorical": [
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "source_url": "https://archive.ics.uci.edu/static/public/468/online+shoppers+purchasing+intention+dataset.zip",
+      "source_sha256": "2972e6184d3ad7beaaa831d9fc2b059dc3ee29df69d1ec593c466a5cd8485d14",
+      "test_n": 12205,
+      "test_positive": 1908,
+      "folds": [
+        {
+          "fold": 0,
+          "train_n": 7811,
+          "calibration_n": 1953,
+          "test_n": 2441,
+          "train_positive": 0.15644603763922674,
+          "calibration_positive": 0.15616999487967229,
+          "test_positive": 0.1560835723064318,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.02723372799982826,
+              "platt_slope": 1.1443101523334143,
+              "platt_intercept": 0.23188156341795255
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.28037994400028765,
+              "platt_slope": 0.9903244277355546,
+              "platt_intercept": -0.04336583046306391
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 1.9406253460001608,
+              "platt_slope": 1.4948380377187633,
+              "platt_intercept": 0.6640188444281554
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 1.3660652549997394,
+              "platt_slope": 1.0262940961262983,
+              "platt_intercept": 0.017466277606748064
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "train_n": 7811,
+          "calibration_n": 1953,
+          "test_n": 2441,
+          "train_positive": 0.15644603763922674,
+          "calibration_positive": 0.15616999487967229,
+          "test_positive": 0.1560835723064318,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.029104157999881863,
+              "platt_slope": 0.810014310413323,
+              "platt_intercept": -0.30021584642796717
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.28240445899973565,
+              "platt_slope": 0.9440808299544167,
+              "platt_intercept": -0.0542418551925987
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 1.6497345689999747,
+              "platt_slope": 1.3397167548747515,
+              "platt_intercept": 0.49312195105826817
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 5.932722474999991,
+              "platt_slope": 0.9099840793378771,
+              "platt_intercept": -0.07429558967036357
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "train_n": 7811,
+          "calibration_n": 1953,
+          "test_n": 2441,
+          "train_positive": 0.15631801305850723,
+          "calibration_positive": 0.15616999487967229,
+          "test_positive": 0.15649324047521507,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.10433780999983355,
+              "platt_slope": 0.838904877545364,
+              "platt_intercept": -0.24876229797566285
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.4216074880000633,
+              "platt_slope": 0.8657806696490022,
+              "platt_intercept": -0.17239008451792143
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 3.4845013129997824,
+              "platt_slope": 1.3746900800251132,
+              "platt_intercept": 0.5224433338694369
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 1.7996604300001309,
+              "platt_slope": 0.9541031974717337,
+              "platt_intercept": -0.02275440951985597
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "train_n": 7811,
+          "calibration_n": 1953,
+          "test_n": 2441,
+          "train_positive": 0.15631801305850723,
+          "calibration_positive": 0.15616999487967229,
+          "test_positive": 0.15649324047521507,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.028595683999810717,
+              "platt_slope": 0.8575489137327298,
+              "platt_intercept": -0.23486466855995647
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.26809727599993494,
+              "platt_slope": 0.890464186242422,
+              "platt_intercept": -0.17452442116353142
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 1.8653271729999688,
+              "platt_slope": 1.2478972372074861,
+              "platt_intercept": 0.32320992374820096
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 2.2758624220000456,
+              "platt_slope": 0.9243312248997965,
+              "platt_intercept": -0.09064700582721398
+            }
+          ]
+        },
+        {
+          "fold": 4,
+          "train_n": 7811,
+          "calibration_n": 1953,
+          "test_n": 2441,
+          "train_positive": 0.15631801305850723,
+          "calibration_positive": 0.15616999487967229,
+          "test_positive": 0.15649324047521507,
+          "models": [
+            {
+              "method": "BI frequency",
+              "fit_seconds": 0.03411311599984401,
+              "platt_slope": 0.9247123417082915,
+              "platt_intercept": -0.12337737776636683
+            },
+            {
+              "method": "Logistic",
+              "fit_seconds": 0.2577633949999836,
+              "platt_slope": 0.912866679542115,
+              "platt_intercept": -0.14448059574314637
+            },
+            {
+              "method": "Random forest",
+              "fit_seconds": 5.906232810000347,
+              "platt_slope": 1.4319744653553892,
+              "platt_intercept": 0.5616790881029448
+            },
+            {
+              "method": "Gradient boosting",
+              "fit_seconds": 15.593193832999987,
+              "platt_slope": 0.9709928038313965,
+              "platt_intercept": -0.058399217199510904
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "training_code_sha256": "3de510d00916adbffecf2a63ad2ade6aa84934df94688d3b35f052d3c0d20bb2",
+  "report_code_sha256": "2a9b60c0301b40aa413948c09eb5b28bb871b3f0b797be64326141fcdb2bcdc1"
+}
