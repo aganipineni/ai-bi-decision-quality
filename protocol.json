@@ -1,0 +1,21 @@
+{
+  "revision": 2,
+  "design_date": "2026-10-23",
+  "status": "Specified after inspecting the first two-dataset benchmark, before running this expanded experiment; not externally preregistered.",
+  "question": "When does monotone probability recalibration change capacity-constrained screening decisions, and do calibration-selection criteria transfer under temporal shift and missing data?",
+  "datasets": ["bank", "shop", "churn"],
+  "outer_folds": 5,
+  "fit_replicates": 3,
+  "fit_replicate_definition": "Original training/calibration sample plus two independent bootstrap perturbations; temporal data use circular blocks of 100 rows; no test records are resampled for fitting.",
+  "tuning": "Three prespecified candidates per machine-learning model, chosen by Brier loss on an inner training-only holdout. Hyperparameter tuning is repeated for every fitting replicate.",
+  "calibration": "Disjoint calibration-fit and calibration-selection blocks; identity, monotone logit-Platt, monotone beta, isotonic.",
+  "policies": ["Raw", "Logit-Platt", "Beta", "Isotonic", "Brier-selected", "Utility-selected", "Direct threshold"],
+  "primary_cost": 0.1,
+  "primary_capacity": 0.2,
+  "cost_grid": [0.05, 0.1, 0.2, 0.4],
+  "capacity_grid": [0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+  "stress": "Clean; independent cell missingness and whole-record predictor outage at rates 0.15, 0.30, 0.50; three paired mask replicates. No labels are altered.",
+  "inference": "Paired 2000-draw test bootstrap conditional on the original fitted models and actions; temporal blocks of 100, with 25/250 sensitivity. Three fitting replicates are reported separately as a stability range, not a confidence interval.",
+  "business_interpretation": "Observed-label screening utility with assumed unit reward and common cost. No causal treatment effect, realized revenue, organizational readiness, or strategic decision-quality effect is estimated.",
+  "tie_rule": "All monotone calibration policies preserve raw-score order, then original record ID. Isotonic plateau ties do not reorder cases."
+}

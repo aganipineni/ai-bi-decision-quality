@@ -1,0 +1,10 @@
+{
+  "dataset": "churn",
+  "fold": 0,
+  "fit_replicate": 0,
+  "max_absolute_prediction_difference": 2.220446049250313e-16,
+  "metadata_equivalent": true,
+  "metadata_max_absolute_difference": 1.3322676295501878e-15,
+  "metadata_tolerance": 1e-10,
+  "tolerance": 1e-12
+}
