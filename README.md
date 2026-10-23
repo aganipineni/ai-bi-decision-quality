@@ -30,7 +30,7 @@ The program verifies raw archive SHA-256 checksums before reading. If an archive
 - `data/`: two original UCI ZIP archives.
 - `results/`: two prediction archives, provenance, numerical analyses, two CSV tables, two research figures and a separate graphical abstract.
 
-Each scientific figure is available as vector PDF and 600 dpi PNG. The graphical abstract is a separate 3000 by 1200 pixel PNG and vector PDF. It is drawn with Matplotlib, without an image-generation model.
+Each scientific figure is available as vector PDF and 600 dpi PNG. The graphical abstract is a separate 3000 by 1200 pixel PNG and vector PDF. Figures and the graphical abstract use Matplotlib.
 
 ## Protocol and interpretation
 
@@ -72,4 +72,4 @@ UCI lists both datasets under Creative Commons Attribution 4.0 (https://creative
 
 ## Research status
 
-The professor's reference manuscript and the student's original draft are not included in this repository. Their text, figures and experimental contributions were not copied. Numerical results come from executing this Python program on the cited datasets. Human author review, required submission declarations, journal requirements and a public archival release remain necessary before submission. No journal submission has been performed.
+Numerical results come from executing this Python program on the cited datasets. Author review, required submission declarations, journal requirements and a public archival release remain necessary before submission. No journal submission has been performed.
