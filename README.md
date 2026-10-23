@@ -70,6 +70,6 @@ Self-tests verify policy optimality against exhaustive small-case enumeration, s
 
 UCI lists both datasets under Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/). Original archives are unmodified; row deduplication and feature exclusions occur only in memory. Derived predictions, aggregate tables and figures are produced by this code. See dataset citations above for required attribution. A software license has not been selected by the author; absence of a license is not a grant of unrestricted reuse.
 
-## Research status and AI disclosure
+## Research status
 
-The professor's reference manuscript and the student's original draft are not included in this repository. Their text, figures and experimental contributions were not copied. OpenAI ChatGPT/Codex (GPT-6) assisted with design, implementation, analysis, literature triage, plotting code and drafting. Numerical results come from executing this Python program on the cited datasets. Human author review, contributor declarations, journal requirements and a public archival release remain necessary before submission. No journal submission has been performed.
+The professor's reference manuscript and the student's original draft are not included in this repository. Their text, figures and experimental contributions were not copied. Numerical results come from executing this Python program on the cited datasets. Human author review, required submission declarations, journal requirements and a public archival release remain necessary before submission. No journal submission has been performed.
